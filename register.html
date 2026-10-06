@@ -1,0 +1,38 @@
+<html>
+    <title>Create Account</title>
+    <link rel="stylesheet" 
+    href="{{url_for('static',filename='style.css')}}">
+<body>
+    <nav class ="navbar">
+        <div class="logo">
+            SBI Bank
+        </div>
+        <div class="nav-links">
+            <a href="{{url_for('home')}}">HOME</a>
+            <a href="{{url_for('login')}}">Login</a>
+        </div>
+    </nav>
+    <dev class="form-container">
+        <div class="form-box">
+            <h1>Create Account</h1>
+            <p class="form-subtitle">
+                Open your SBI account
+            </p>
+            <form method="POST">
+                <label>Full name</label>
+                <input type="text" name="name" placeholder="enter your full name">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="enter your email">   
+                <label>Password</label>
+                <input type="password" name="password" placeholder="enter your password">
+                <button type="submit">Create Account</button>  
+                        
+            </form>
+            <p class ="login-text">
+                Already have an account?
+                <a href="{{url_for('login')}}">Login</a>
+            </p>
+        </div>
+    </dev>
+</body>
+</html>

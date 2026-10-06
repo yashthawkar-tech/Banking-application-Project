@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - SecureBank</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🏦 SecureBank
+        </div>
+
+        <div class="nav-links">
+
+            <a href="{{ url_for('dashboard') }}">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('logout') }}">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="dashboard">
+
+        <h1>
+            Welcome, {{ account.name }} 👋
+        </h1>
+
+        <p>
+            Welcome to your banking dashboard.
+        </p>
+
+
+        <div class="balance-card">
+
+            <h3>Available Balance</h3>
+
+            <h2>
+                ₹{{ account.balance }}
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>Balance</h3>
+
+                <p>
+                    ₹{{ account.balance }}
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="icon">
+                    💳
+                </div>
+
+                <h3>Deposit</h3>
+
+                <p>
+                    Add money to your account
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="icon">
+                    💸
+                </div>
+
+                <h3>Withdraw</h3>
+
+                <p>
+                    Withdraw money from your account
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="icon">
+                    🔄
+                </div>
+
+                <h3>Transfer</h3>
+
+                <p>
+                    Transfer money to another account
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
